@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse,HttpResponseRedirect
+from django.shortcuts import render,redirect
 
 def Home(request):
     # return HttpResponse("Welcome to the Home Page")
@@ -10,9 +10,14 @@ def Home(request):
     return render(request,'index.html',info)
 
 def AboutUs(request):
+    if request.method == "GET":
+        output = request.GET.get('output')
+    elif request.method == "POST":
+        output = request.POST['output']
     info = {
         "title" : "About us",
-        "header" : "About Demo"
+        "header" : "About Demo",
+        "output" : output,
     }
     return render(request,'about.html',info)
 
@@ -72,13 +77,28 @@ def UserForm(request):
             num = request.POST['number']
             msg = request.POST['userMessage']
             fullName = fname +" "+ lname
+
+            url = "/about/?output={}".format(fullName)
+
+            # return HttpResponseRedirect('/about/')
+            # return HttpResponseRedirect(url)
+            return redirect(url)
     except:
         pass
     info = {
             "title" : "Contact",
             "header" : "Contact Demo",
             "fullName":fullName,
-            "fname":fname,
-            # yaha sai baki hi ..8 mint tak dekha hu of post method
         }
     return render(request,'userForm.html',info)
+
+def submitDataFromForm(request):
+    if request.method == "POST":
+        # return HttpResponse(request)
+        fname = request.POST['firstName']
+        lname = request.POST.get('lastName')
+
+        fullName = fname +" "+ lname
+
+        url = "/about/?output={}".format(fullName)
+        return redirect(url)

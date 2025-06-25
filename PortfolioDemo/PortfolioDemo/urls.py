@@ -25,5 +25,6 @@ urlpatterns = [
     path('services/',views.Services,name="service"),
     path('blog/',views.Blog,name="blog"),
     path('contact/',views.Contact,name="contact"),
-    path('userform/',views.UserForm,name="userForm")
+    path('userform/',views.UserForm,name="userForm"),
+    path('submit-form/',views.submitDataFromForm,name="submitform")
 ]
