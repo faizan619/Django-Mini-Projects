@@ -7,7 +7,7 @@
       <div class="col-lg-8">
         <div class="card">
           <div class="card-body">
-            <form class="form-group" method="POST">
+            <form class="form-group" method="POST" action="{% url 'submitform' %}">
                 {% csrf_token %}
               <h3 class="text-center">
                 Please fill out this User Form {{fullName}}
@@ -28,7 +28,7 @@
                   class="form-control form-control-lg p-2 m-2"
                 />
               </div>
-              <div class="form-inline">
+              <!-- <div class="form-inline">
                 <input
                   type="email"
                   placeholder="Email"
@@ -43,16 +43,16 @@
                   
                   class="form-control form-control-lg p-2 m-2"
                 />
-              </div>
+              </div> -->
               <div>
-                <textarea
+                <!-- <textarea
                   rows="3"
                   placeholder="Message"
                   class="form-control form-control-lg p-2 m-2"
                   name="userMessage"
                   
                 >
-                </textarea>
+                </textarea> -->
                 <input
                   type="submit"
                   value="Submit"
