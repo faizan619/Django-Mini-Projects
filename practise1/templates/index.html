@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  
+  
+<!-- Space below navbar -->
+<div style="height: 110px;"></div>
+
+
+
+  <!-- Hero Section -->
+  <header class="hero text-white text-center d-flex align-items-center justify-content-center" 
+        style="background: url('static/image/spag.jpg') center/cover no-repeat; height: 70vh;">
+      <div>
+        <h1 class="display-4 fw-bold">❤️{{hero}}❤️</h1>
+        <p class="lead">{{sub_hero}}.</p>
+        <a href="{% url 'menu' %}" class="btn btn-primary btn-lg mt-3">View Menu</a>
+      </div>
+    </div>
+  </header>
+
+
+<!-- Our Specialties -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-5 fw-bold" style="color: #1b1f3a;">❤️Our Specialties❤️</h2>
+    <div class="row g-4 justify-content-center">
+
+        <!-- Featured Dishes -->
+
+      <!-- Dish 1 -->
+      <div class="col-md-4">
+        <div class="feature-card bg-white p-3 h-100">
+          <img src="static/image/Creamy-Pesto-Alfredo-Chicken-Pasta-2.jpg" class="img-fluid rounded mb-3" alt="Creamy Alfredo Pasta">
+          <h3>Creamy Alfredo Pasta</h3>
+          <p>Rich, creamy, and topped with curry leaf. Can be sided with grilled beef or chicken.</p>
+        </div>
+      </div>
+
+      <!-- Dish 2 -->
+      <div class="col-md-4">
+        <div class="feature-card bg-white p-3 h-100">
+          <img src="static/image/burger.jpg" class="img-fluid rounded mb-3" alt="Gourmet Burger">
+          <h3>Gourmet Beef Burger</h3>
+          <p>Juicy and grilled to perfection with special sauce.</p>
+        </div>
+      </div>
+
+      <!-- Dish 3 -->
+      <div class="col-md-4">
+        <div class="feature-card bg-white p-3 h-100">
+          <img src="static/image/choco-cake.jpg" class="img-fluid rounded mb-3" alt="Lava Cake">
+          <h3>Choco Lava Cake</h3>
+          <p>Warm chocolate cake with molten center.</p>
+        </div>
+      </div>
+
+      <!-- Dish 4 (Video) -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card bg-white p-3 h-100">
+          <video class="img-fluid rounded mb-3" autoplay muted loop playsinline style="height: 300px; object-fit: cover;">
+            <source src="static/video/Spag-compressed-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <h3>Classic Spaghetti</h3>
+          <p>A timeless favorite, lightly tossed in tomato-basil sauce and parmesan.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA Section -->
+<section class="text-white text-center py-5" style="background-color: #f5f7fa;">
+  <div class="container">
+    <h2 class="mb-3" style="color: #1b1f3a;">Reserve a Table Today</h2>
+    <p class="mb-4" style="color: #1b1f3a;">Experience the best dining with us. Book your table now!</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4" style="background-color: #3B82F6; border: none;">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+{% endblock content %}

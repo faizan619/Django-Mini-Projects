@@ -1,0 +1,77 @@
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+    body {
+      background-color: #f5f7fa; /* Baby pink */
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero-section {
+      background: url('./image/fast-food-logo.PNG') center/cover no-repeat;
+      height: 90vh;
+    }
+
+  
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar, .card, .section {
+  background-color: #ffffff;
+  color: #1f1f1f;
+}
+
+    .navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+    .navbar {
+      background-color: 	#1b1f3a;
+  padding-top: 0.3rem;
+  padding-bottom: 0.01rem;
+    }
+    .navbar-brand, .nav-link {
+      color: #f5f7fa !important; /* Deep purple */
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+      color: #3a86ff !important; /* Light blue */
+    }
+    .btn-primary {
+      background-color: #6a0dad;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #277dec;
+}
+
+.card:hover, .feature-card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+    footer {
+  background-color: #1b1f3a;
+  color: #ffffff;
+}
+footer a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+footer a:hover {
+  color: #3a86ff;
+}
+

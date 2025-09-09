@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  
+  
+
+<div style="height: 110px;"></div>
+
+
+<!-- Hero Section -->
+
+<header class="hero text-white text-center d-flex align-items-center justify-content-center" 
+        style="background: url('/static/image/spag.jpg') center/cover no-repeat; height: 70vh;">
+        
+    <div class="container">
+    <h1 class="fw-bold">{{hero}}</h1>
+    <p class="lead">{{sub_hero}}.</p>
+    </div>
+</header>
+
+<div style="height: 50px;"></div>
+
+<!-- Menu Section -->
+
+ <div class="container text-center">
+    <h2 class="mb-5 fw-bold" style="color: #1b1f3a;">❤️Our Specials❤️</h2>
+    <div class="row g-4 justify-content-center">
+    </div>
+ </div>
+
+ <!-- dishes -->
+
+<section class="menu-section container">
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="card menu-item">
+        <img src="/static/image/spag.jpg" class="card-img-top" alt="Spaghetti">
+        <div class="card-body">
+          <h3 class="card-title">Spicy Jollof Pasta</h3>
+          <p class="card-text">Pasta in jollof sauce, grilled chicken on the side.</p>
+          <p class="fw-bold text-danger">₦3,500</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card menu-item">
+        <img src="/static/image/Flavor-rice.jpg" class="card-img-top" alt="Rice Dish">
+        <div class="card-body">
+          <h3 class="card-title">Flavor Rice Special</h3>
+          <p class="card-text">Steamed rice with vegetables and turkey wings.</p>
+          <p class="fw-bold text-danger">₦4,000</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card menu-item">
+        <img src="/static/image/burger.jpg" class="card-img-top" alt="Burger">
+        <div class="card-body">
+          <h3 class="card-title">Chicken Burger Deluxe</h3>
+          <p class="card-text">Grilled chicken, lettuce & creamy sauce in bun.</p>
+          <p class="fw-bold text-danger">₦2,800</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card menu-item">
+        <img src="/static/image/smoothie.jpg" class="card-img-top" alt="Smoothie">
+        <div class="card-body">
+          <h3 class="card-title">Strawberry Smoothie</h3>
+          <p class="card-text">Fresh strawberry, milk, honey & ice blend.</p>
+          <p class="fw-bold text-danger">₦1,500</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="text-center mt-5">
+  <h2 class="fw-bold" style="color: #1b1f3a;">More to Explore</h2>
+  <p class="lead">From appetizers to desserts, we have something for everyone!</p>
+<span class="d-block mb-4">
+  <a href="menu.html" class="btn btn-primary" style="background-color: #3B82F6;">View Full Menu</a>
+</span>
+    </div>
+
+{% endblock content %}
