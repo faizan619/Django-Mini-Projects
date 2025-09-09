@@ -19,5 +19,9 @@ from practise1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.HomePage,name="home")
+    path('',views.HomePage,name="home"),
+    path('menu/',views.MenuPage,name="menu"),
+    path('about/',views.AboutUs,name="about"),
+    path('contact/',views.ContactUs,name="contact"),
+    path('contact-form/',views.ContactFormHandling,name="contactformhandling")
 ]
